@@ -13,8 +13,9 @@ fn main(){
         input = input.to_string();
         input = (&mut input).trim().to_string();
 
-        if input.eq("exit"){
-            break;
+        match input.as_str() {
+            "exit" => break,
+            _ => println!("Command not found")
         }
     }
 }
