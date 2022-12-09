@@ -10,7 +10,6 @@ fn main(){
         stdout().flush().unwrap();
 
         stdin.read_line(&mut input).expect("Failed to read line");
-        input = input.to_string();
         input = (&mut input).trim().to_string();
 
         match input.as_str() {
