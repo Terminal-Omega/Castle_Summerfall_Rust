@@ -1,4 +1,5 @@
 use std::io::{stdout, Write, stdin};
+use colored::*;
 
 fn main(){
     let stdin = stdin();
@@ -14,7 +15,7 @@ fn main(){
 
         match input.as_str() {
             "exit" => break,
-            _ => println!("Command not found")
+            _ => println!("{}", "invalid command".red()),
         }
     }
 }
