@@ -3,7 +3,7 @@ use crate::entities::Entity;
 pub struct Room{
     doors: Vec<Door>,
     items: Vec<Box<dyn Item>>,
-    entities: Vec<Entity>
+    entities: Vec<Box<dyn Entity>>
 }
 
 enum Door{

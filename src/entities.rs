@@ -1,5 +1,5 @@
-pub enum Entity {
-    Enemy(Enemy)
+pub trait Entity{
+    
 }
 
 pub struct Enemy {
