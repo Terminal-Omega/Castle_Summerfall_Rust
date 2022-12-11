@@ -1,8 +1,8 @@
 use crate::items::Item;
 use crate::entities::Entity;
-struct Room{
+pub struct Room{
     doors: Vec<Door>,
-    items: Vec<Item>,
+    items: Vec<Box<dyn Item>>,
     entities: Vec<Entity>
 }
 
