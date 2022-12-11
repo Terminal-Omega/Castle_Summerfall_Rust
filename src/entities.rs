@@ -3,5 +3,5 @@ pub enum Entity {
 }
 
 pub struct Enemy {
-    
+
 }
