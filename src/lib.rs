@@ -1,11 +1,7 @@
-mod items;
-mod entities;
-mod rooms;
-use rooms::Room;
+pub mod items;
+pub mod entities;
+pub mod rooms;
 
-pub fn generate_room() -> Room {
-    Room::new()
-}
 
 pub fn help_command() {
     let help_text = "Help 
@@ -14,3 +10,4 @@ pub fn help_command() {
                            help -> print command list and what each command does\n";
     print!("{}", help_text);
 }
+

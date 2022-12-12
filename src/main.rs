@@ -1,10 +1,11 @@
 use std::io::{stdout, Write, stdin};
 use colored::*;
-use cs_lib::{self, generate_room, help_command};
+use cs_lib::{self, help_command};
+use cs_lib::rooms::Room;
 
 fn main(){
     let stdin = stdin();
-    let room = generate_room();
+    let room = Room::new();
 
     loop {
         let mut input = String::from("");

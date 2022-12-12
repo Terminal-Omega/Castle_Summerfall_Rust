@@ -1,9 +1,20 @@
 pub trait Item {
     fn get_name(&self) -> &str;
+    fn get_description(&self) -> &str;
 }
 
 pub struct Weapon {
+    name: String,
+    description: String
+}
 
+impl Item for Weapon {
+    fn get_name(&self) -> &str {
+        &self.name
+    }
+    fn get_description(&self) -> &str {
+        &self.description
+    }
 }
 
 pub struct Container {
@@ -13,26 +24,18 @@ pub struct Container {
 
 impl Item for Container {
     fn get_name(&self) -> &str {
-        &&self.name.as_str()
+        &self.name
+    }
+    fn get_description(&self) -> &str {
+        &self.description
     }
 }
 
-pub struct Object {
-    name: String,
-    description: String
-}
-
-impl Object {
-    pub fn new(name: &str, description: &str) -> Object {
-        Object {
-            name: name.to_string(),
-            description: description.to_string()
+impl Container {
+    pub fn new<StringOrRef: Into<String>>(name: StringOrRef, description: StringOrRef) -> Self {
+        Container {
+            name: name.into(),
+            description: description.into()
         }
-    }
-}
-
-impl Item for Object {
-    fn get_name(&self) -> &str {
-        &&self.name.as_str()
     }
 }
