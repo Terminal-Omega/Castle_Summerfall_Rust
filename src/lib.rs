@@ -3,7 +3,7 @@ mod entities;
 mod rooms;
 use rooms::Room;
 
-pub fn generateRoom() -> Room {
+pub fn generate_room() -> Room {
     Room::new()
 }
 
