@@ -1,6 +1,6 @@
 use std::io::{stdout, Write, stdin};
 use colored::*;
-use cs_lib::{self, generateRoom};
+use cs_lib::{self, generateRoom, help_command};
 
 fn main(){
     let stdin = stdin();
@@ -18,6 +18,7 @@ fn main(){
         match input.as_str() {
             "exit" => break,
             "describe"=>println!("{}", room.describe()),
+            "help" => help_command(),
             _ => println!("{}", "invalid command".red()),
         }
     }
